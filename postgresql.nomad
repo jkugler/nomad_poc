@@ -31,7 +31,7 @@ job "postgres" {
     }
       volume_mount {
         volume = "postgres"
-        destination = "/var/lib/postgresql/"
+        destination = "/var/lib/postgresql/data"
         read_only = false
       }
 
@@ -40,6 +40,7 @@ job "postgres" {
           {{ with secret "secret/data/db/config" }}
 POSTGRES_USER="{{ .Data.data.user }}"
 POSTGRES_PASSWORD="{{ .Data.data.pass | toJSON }}"
+PGDATA="/var/lib/postgresql/data/pgdata"
           {{ end }}
 EOT
         destination = "db.env"

@@ -22,7 +22,6 @@ job "api-sample-python" {
         image = "jkugler/api-sample-python:20210504"
         args = [ ":${NOMAD_PORT_http}" ]
         ports = ["http"]
-        dns_servers = ["127.0.0.1"]
       }
 
       vault {

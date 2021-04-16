@@ -40,7 +40,7 @@ variable "server_count" {
 
 variable "client_count" {
   description = "The number of clients to provision."
-  default     = "1"
+  default     = "4"
 }
 
 variable "retry_join" {
