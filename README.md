@@ -15,3 +15,5 @@ Take the server IPs and invoke the cluster initialization:
 ./init_cluster.sh IP1 IP2 IP3
 ```
 Then run `terraform apply` again.
+
+A walk through of this proof of concept can be found here: https://www.youtube.com/watch?v=zjQXSTqTKl4
